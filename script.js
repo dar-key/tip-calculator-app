@@ -23,8 +23,8 @@ tipButtons.forEach(el => {
         unselectAllButtons();
         oldBackgroundColor = el.style.backgroundColor;
         oldColor = el.style.color;
-        el.style.backgroundColor = 'red';
-        el.style.color = 'black';
+        el.style.backgroundColor = 'hsl(143, 60%, 46%)';
+        el.style.color = 'white';
         console.log('Selected tip: ' + selectedTip);
         updateResults()
     });
