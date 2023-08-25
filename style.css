@@ -1,0 +1,213 @@
+::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+body {
+    margin: 0;
+    background-color: hsl(185, 41%, 84%);
+}
+
+#tip-calculator-app-container {
+    width: 100%;
+}
+
+#tip-calculator-app-container .logo {
+    width: 20%;
+    max-width: 100px;
+    display: block;
+    margin: 45px auto;
+}
+
+#tip-calculator-app-container .main-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px 20px 0 0;
+}
+
+#tip-calculator-app-container .main-container h4 {
+    margin: 0 0 10px 0;
+    font-size: 0.75rem;
+    color: hsl(186, 14%, 43%);
+}
+
+#tip-calculator-app-container .main-container input {
+    color: hsl(183, 100%, 15%);
+    border: none;
+    outline: 0;
+}
+
+#tip-calculator-app-container .bill-amount,
+#tip-calculator-app-container .tip-selection,
+#tip-calculator-app-container .number-of-people {
+    margin: 0 0 30px 0;
+}
+
+#tip-calculator-app-container .tip-selection  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+
+#tip-calculator-app-container .tip-selection .tip {
+    flex-basis: 48%;
+    border: 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#tip-calculator-app-container .tip-selection .tip-btn {
+    padding: 8px;
+    background-color: hsl(183, 100%, 15%);
+    margin-bottom: 15px;
+    color: white;
+    transition: 0.1s ease-in;
+}
+
+#tip-calculator-app-container .tip-selection .tip-btn:hover {
+    transition: 0.1s ease-out;
+    background-color: hsl(172, 60%, 46%);
+    color: hsl(183, 100%, 15%);
+}
+
+#tip-calculator-app-container .tip-selection .tip-custom {
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+}
+
+#tip-calculator-app-container .main-container .input-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsl(189, 41%, 97%);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+#tip-calculator-app-container .main-container .icon {
+   flex-basis: 15%;
+}
+
+#tip-calculator-app-container .main-container .sub-input-div {
+    padding: 0;
+    margin: 0;
+    flex-basis: 50%;
+}
+
+#tip-calculator-app-container .main-container .number-input {
+    text-align: right;
+    width: 100%;
+    background-color: transparent;
+}
+
+
+#tip-calculator-app-container .tip-results {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 14px;
+    padding: 42px 24px
+}
+
+#tip-calculator-app-container .tip-results h5 {
+    font-size: 0.7rem;
+    color: white;
+    margin: 0;
+}
+
+#tip-calculator-app-container .tip-results p {
+    font-size: 0.6rem;
+    color: hsl(184, 14%, 56%);
+    margin: 0;
+}
+
+#tip-calculator-app-container .tip-results h3 {
+    color: hsl(172, 67%, 45%);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#tip-calculator-app-container .tip-results .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+#tip-calculator-app-container .tip-results .reset-btn {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    font-size: 0.9rem;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: 0;
+    border-radius: 6px;
+    transition: 0.15s ease-in;
+}
+
+#tip-calculator-app-container .tip-results .reset-btn:hover {
+    transition: 0.15s ease-out;
+    background-color: hsl(156, 67%, 61%);
+    color: hsl(0, 0%, 98%);
+}
+
+
+@media (min-width: 700px) {
+    #tip-calculator-app-container {
+        padding: 6% 4%;
+    }
+
+    #tip-calculator-app-container .logo {
+        width: 8%;
+        min-width: 90px;
+        margin-bottom: 60px;
+    }
+
+    #tip-calculator-app-container .main-container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 25px;
+        box-shadow: 0 12px 70px 20px rgba(0, 73, 77, 0.1);
+        padding: 36px;
+    }
+
+    #tip-calculator-app-container .user-input-main-container {
+        flex-basis: 47%;
+    }
+
+    #tip-calculator-app-container .tip-results {
+        flex-basis: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #tip-calculator-app-container .tip-results h3 {
+        font-size: 1.5rem;
+    }
+
+    #tip-calculator-app-container .tip-results .info {
+        margin-bottom: 28px;
+    }
+
+    #tip-calculator-app-container .tip-selection .tip {
+        flex-basis: 31%;
+    }
+
+    #tip-calculator-app-container .user-input-main-container .number-of-people {
+        margin: 0;
+    }
+
+}
