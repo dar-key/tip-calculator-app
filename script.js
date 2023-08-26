@@ -61,18 +61,29 @@ tipCalculatorMainContainer.querySelectorAll('.number-input').forEach(inputEl => 
     const dataType = inputEl.className.split(' ')[0];
 
     inputEl.addEventListener('input', (inputEvent) => {
-        if (!/[0-9.]/.test(inputEvent.data))
-            inputEl.value = inputEl.value.replaceAll(inputEvent.data, '');
-
-        if (inputEl.value.length >= 7) {
-            inputEl.value = inputEl.value.substring(0, inputEl.value.length - 1);
-        }
         
-        if (dataType == 'bill-amount-input')
-            billAmount = Number(inputEl.value);
-        else if (dataType == 'number-of-people-input')
-            numberOfPeople = Number(inputEl.value);
+        
+        if (dataType == 'bill-amount-input') {
+            if (!/[0-9.]/.test(inputEvent.data))
+                inputEl.value = inputEl.value.replaceAll(inputEvent.data, '');
 
+            if (inputEl.value.length >= 7) {
+                inputEl.value = inputEl.value.substring(0, inputEl.value.length - 1);
+            }
+
+            billAmount = Number(inputEl.value);
+        }
+        else if (dataType == 'number-of-people-input') {
+            if (!/[0-9]/.test(inputEvent.data))
+                inputEl.value = inputEl.value.replaceAll(inputEvent.data, '');
+
+            if (inputEl.value.length >= 7) {
+                inputEl.value = inputEl.value.substring(0, inputEl.value.length - 1);
+            }
+            
+            numberOfPeople = Number(inputEl.value);
+        }
+            
         updateResults();
     });
 });
